@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+.logo {
+    margin-top: 50px;
+    width: 60px;
+    height: 60px;
+}
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.input-area {
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.upload-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 5px;
+}
+.upload-icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+.message-input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+}
+.message-input::placeholder {
+    color: #888888;
+}
+.send-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+}
+.send-icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+/* Add some basic styles for disabled state */
+.message-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.file-display {
+    display: none;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.file-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ff4081;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.file-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+.file-name {
+    color: white;
+    font-size: 14px;
+}
+.file-type {
+    color: #888888;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.remove-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    background-color: #f00;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.remove-button svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+.file-display:hover .remove-button {
+    opacity: 1;
+}
