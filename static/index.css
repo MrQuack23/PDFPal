@@ -24,13 +24,38 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.message {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.user-message {
+    align-self: flex-end;
+    background-color: #2b2b2b;
+    margin-left: auto;
+}
+.ai-message {
+    align-self: flex-start;
+    margin-right: auto;
+}
+.wrap{    
+    padding-bottom: 20px;
+    position: sticky;
+    bottom: 0;
+}
 .input-area {
     display: flex;
     align-items: center;
     background-color: #2b2b2b;
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 20px;
+    z-index: 10;
 }
 .upload-button {
     background: none;
