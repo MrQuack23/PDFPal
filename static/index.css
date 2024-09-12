@@ -48,6 +48,7 @@ body {
     padding-bottom: 20px;
     position: sticky;
     bottom: 0;
+    background-color: #1e1e1e;
 }
 .input-area {
     display: flex;
@@ -161,4 +162,25 @@ body {
 }
 .file-display:hover .remove-button {
     opacity: 1;
+}
+
+.file-display-wrapper {
+    display: flex;
+    align-items: center;
+}
+.loading-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+    display: none;
+    margin-left: 20px;
+}
+.loading-bar-progress {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
 }
