@@ -53,36 +53,6 @@
         const fileName = document.querySelector('.file-name');
         const removeButton = document.querySelector('.remove-button');
 
-        function addMessage(message, isUser) {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message');
-            messageElement.classList.add(isUser ? 'user-message' : 'ai-message');
-            messageElement.textContent = message;
-            chatMessages.appendChild(messageElement);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function sendMessage() {
-            const message = messageInput.value.trim();
-            if (message) {
-                addMessage(message, true);
-                messageInput.value = '';
-                
-                // Simulate AI response
-                setTimeout(() => {
-                    addMessage("Hey, how can I help you?", false);
-                }, 1000);
-            }
-        }
-
-
-        sendButton.addEventListener('click', sendMessage);
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-
         pdfUpload.addEventListener('change', (event) => {
             const file = event.target.files[0];
             if (file && file.type === 'application/pdf') {

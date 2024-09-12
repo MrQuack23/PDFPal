@@ -86,10 +86,12 @@ def upload_pdf():
 
 @app.route('/query', methods=['POST'])
 def query():
-    text = request.form['text']
-    print(f'Query: {text}')
-    return render_template('index.html', {'user_message': text})
-
+    try:
+        text = request.form['text']
+        print(f'Query: {text}')
+        return render_template('index.html')
+    except Exception as e: 
+        return jsonify({'message': f'Error processing query: {str(e)}'}), 500
 
 
 if __name__ == '__main__':
