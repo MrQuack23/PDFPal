@@ -39,10 +39,12 @@ body {
     align-self: flex-end;
     background-color: #2b2b2b;
     margin-left: auto;
+    line-height: 1.6;
 }
 .ai-message {
     align-self: flex-start;
     margin-right: auto;
+    line-height: 1.6;
 }
 .wrap{    
     padding-bottom: 20px;
@@ -114,6 +116,7 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     position: relative;
+    width: 100%; 
 }
 .file-icon {
     width: 30px;
@@ -167,20 +170,5 @@ body {
 .file-display-wrapper {
     display: flex;
     align-items: center;
-}
-.loading-bar {
-    width: 100px;
-    height: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-left: 10px;
-    display: none;
-    margin-left: 20px;
-}
-.loading-bar-progress {
-    width: 0%;
-    height: 100%;
-    background-color: #4CAF50;
-    transition: width 0.3s ease;
+    width: 100%;
 }
